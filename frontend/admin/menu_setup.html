@@ -1,0 +1,167 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/admDbrd.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>Caterer - Menu SetUp</title>
+</head>
+
+<body>
+    <div class="" id="header">
+        <div class="logo"><a href="#">Buka<span>Spot</span></a></div>
+    </div>
+
+    <div id="container">
+        <div class="sidebar">
+            <ul class="" id="nav">
+                <li><a href="adminDashboard.html">Dashboard</a></li>
+                <li><a href="menu_setup.html" class="selected">Menu SetUp</a></li>
+                <li><a href="meal_setup.html">Meal SetUp</a></li>
+                <li><a href="admin_orders.html">Orders</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="headTitle">
+                <h1>Available Menu</h1>
+            </div>
+            <div class="headBtn">
+                <button class="btn btn-blue newMeal">Add New Menu</button>
+            </div>
+            <table id="myTable">
+                <tr>
+                    <th>Available Menu</th>
+                    <th>Cost</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>Rice, Beans, Meat</td>
+                    <td>1500</td>
+                    <td>
+                        <button class="btn btn-green newMeal">Edit</button>
+                        <button class="btn btn-red newMeal">Delete</button>
+                        <button class="btn btn-purple newMeal">Publish</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Eba and Eforiro</td>
+                    <td>900</td>
+                    <td>
+                        <button class="btn btn-green newMeal">Edit</button>
+                        <button class="btn btn-red newMeal">Delete</button>
+                        <button class="btn btn-purple newMeal">Publish</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Amala, Ewedu</td>
+                    <td>900</td>
+                    <td>
+                        <button class="btn btn-green newMeal">Edit</button>
+                        <button class="btn btn-red newMeal">Delete</button>
+                        <button class="btn btn-purple newMeal">Publish</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ewa Agoin and stew</td>
+                    <td>500</td>
+                    <td>
+                        <button class="btn btn-green newMeal">Edit</button>
+                        <button class="btn btn-red newMeal">Delete</button>
+                        <button class="btn btn-purple newMeal">Publish</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Shawarma</td>
+                    <td>500</td>
+                    <td>
+                        <button class="btn btn-green newMeal">Edit</button>
+                        <button class="btn btn-red newMeal">Delete</button>
+                        <button class="btn btn-purple newMeal">Publish</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pottage</td>
+                    <td>300</td>
+                    <td>
+                        <button class="btn btn-green newMeal">Edit</button>
+                        <button class="btn btn-red newMeal">Delete</button>
+                        <button class="btn btn-purple newMeal">Publish</button>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+
+    </div>
+    <!-- New meal modals -->
+    <div id="myModalNewMeal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close close1">&times;</span>
+                <h3>Add new menu</h3>
+            </div>
+            <div class="modal-body">
+                <div class="container1">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-75">
+                                <select type="text" name="" id="">
+                                    <option value="">Meal 1</option>
+                                    <option value="">Eba</option>
+                                    <option value="">Rice</option>
+                                    <option value="">Fish</option>
+                                    <option value="">Stew</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-75">
+                                <select type="text" name="" id="">
+                                    <option value="">Meal 2</option>
+                                    <option value="">Eba</option>
+                                    <option value="">Rice</option>
+                                    <option value="">Fish</option>
+                                    <option value="">Stew</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-75">
+                                <select type="text" name="" id="">
+                                    <option value="">Meal 3</option>
+                                    <option value="">Eba</option>
+                                    <option value="">Rice</option>
+                                    <option value="">Fish</option>
+                                    <option value="">Stew</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-75">
+                                <input type="date" id="meal_date" name="meal-date" placeholder="Select Date*">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-75">
+                                <input type="file" id="meal_pics" name="meal-pics" placeholder="Select image*">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <input type="submit" value="Submit">
+                            <input type="submit" value="Cancel" style="background-color:red;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/meal_setup.js"></script>
+</body>
+
+</html>

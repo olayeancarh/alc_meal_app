@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Tag */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+/* Header */
+div#header {
+    width: 100%;
+    background-color: #2c3e50;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 63px;
+}
+
+/* Logo */
+.logo {
+    float: left;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+/* Link logo */
+.logo a {
+    font-size: 1.6em;
+    color: #fff;
+}
+
+.logo a span {
+    font-weight: 300;
+}
+
+/* Body container */
+div#container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 250%;
+    background-color: #332c2c;
+    float: left;
+    margin-left: 0px;
+    padding: 15px;
+}
+
+/* Content */
+.content {
+    width: auto;
+    height: 100%;
+    background-color: #fff;
+    margin-left: 250px;
+    padding: 15px;
+
+}
+
+/* User Content */
+.user_content {
+    width: auto;
+    height: 100%;
+    background-color: #fff;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 15px;
+
+}
+
+/* Sidebar list */
+ul#nav {}
+
+ul#nav li {
+    list-style: none;
+}
+
+ul#nav li a {
+    color: #d4d4d4;
+    display: block;
+    padding: 15px;
+    font-size: 1.0em;
+    border-bottom: 1px solid #0a0a0a;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+}
+
+ul#nav li a:hover {
+    background-color: #030303;
+    color: #fff;
+    /* padding-left: 30px; */
+}
+
+ul#nav li a.selected {
+    background-color: #030303;
+    color: #fff;
+}
+
+/* Dashboard tiles */
+.tile {
+    width: 160px;
+    height: 160px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    margin-left: 20px;
+    float: left;
+}
+
+.tile.wide {
+    width: 310px;
+}
+
+.tile .header {
+    height: 110px;
+    background-color: #f4f4f4;
+    border-radius: 4px 4px 0 0;
+    color: white;
+    font-weight: 250;
+}
+
+.tile.wide .header .left,
+.tile.wide .header .right {
+    width: 135px;
+    float: left;
+}
+
+.tile .header .count {
+    font-size: 48px;
+    text-align: center;
+    padding: 10px 0 0;
+}
+
+.tile .header .title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.tile .body {
+    height: 40px;
+    border-radius: 0 0 4px 4px;
+    color: #333333;
+    background-color: white;
+}
+
+.tile .body .title {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 2%;
+}
+
+.tile.wide .body .title {
+    padding: 4%;
+}
+
+.tile.job .header {
+    background: linear-gradient(to bottom right, #609931, #87bc27);
+}
+
+.tile.job .body {
+    color: #609931;
+}
+
+.tile.orders .header {
+    background: linear-gradient(to bottom right, #ef7f00, #f7b200);
+}
+
+.tile.orders .body {
+    color: #ef7f00;
+}
+
+.tile.sales .header {
+    background: linear-gradient(to bottom right, #1f6abb, #4f9cf2);
+}
+
+.tile.sales .body {
+    color: #1f6abb;
+}
+
+.tile.invoice .header {
+    background: linear-gradient(to bottom right, #0aa361, #1adc88);
+}
+
+.tile.invoice .body {
+    color: #0aa361;
+}
+
+/* Buttons */
+.btn {
+    appearance: none;
+    background-color: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 0.6em;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 1.5em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.btn:hover {
+    color: #3498db;
+    outline: 0;
+    background-color: #fff;
+}
+
+.btn-blue {
+    background-color: #3498db;
+    border: 2px solid #3498db;
+
+}
+
+.btn-blue:hover {
+    color: #3498db;
+    outline: 0;
+    background-color: #fff;
+}
+
+.btn-red {
+    background-color: #F60002;
+    border: 2px solid #F60002;
+    display: inline;
+    align-self: center;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 1;
+    margin: 10px;
+    padding: 0.5em 1.0em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-red:hover {
+    color: #F60002;
+    outline: 0;
+    background-color: #fff;
+}
+
+.btn-green {
+    background-color: #AEF44D;
+    border: 2px solid #AEF44D;
+    display: inline;
+    align-self: center;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 1;
+    margin: 10px;
+    padding: 0.5em 1.0em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-green:hover {
+    color: #AEF44D;
+    outline: 0;
+    background-color: #fff;
+}
+
+.btn-purple {
+    background-color: #AC0FB6;
+    border: 2px solid #AC0FB6;
+    display: inline;
+    align-self: center;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 1;
+    margin: 10px;
+    padding: 0.5em 1.0em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.btn-purple:hover {
+    color: #AC0FB6;
+    outline: 0;
+    background-color: #fff;
+}
+
+.headBtn {
+    position: relative;
+    left: 850;
+    top: -25px;
+}
+
+.headTitle {
+    position: absolute;
+    left: auto;
+    top: auto;
+}
+
+/* Modals */
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-header {
+    padding: 10px 16px;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    background: #2c3e50;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+    padding: 2px 16px;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #2c3e50;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:hover {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container1 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+input[type=date],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin: 3px;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-75 {
+    float: left;
+    width: 100%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#myTable td,
+#myTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#myTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#myTable tr:hover {
+    background-color: #ddd;
+}
+
+#myTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2c3e50;
+    color: white;
+}
+
+
+
+.imageGrid {
+    line-height: 0;
+}
+
+.imageGrid .tile {
+    width: 22%;
+    min-height: 15em;
+    line-height: 1.1;
+    display: inline-block;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+
+    color: #fff;
+    font-family: "Verdana", sans-serif;
+    text-shadow: 2px 2px 2px #000;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.imageGrid .tile:before {
+    content: '';
+    background-color: rgba(15, 15, 15, 0.5);
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+}
+
+.imageGrid .tile:hover:before {
+    display: none;
+}
+
+.imageGrid .tile .textWrapper {
+    text-align: center;
+    vertical-align: middle;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: .75em;
+}
+
+.imageGrid .tile .textWrapper .content1 {
+    display: none;
+}
+
+.imageGrid .tile:hover .textWrapper .content1 {
+    display: block;
+}
+
+.imageGrid .tile:hover .textWrapper .content1 h2 {
+    margin: 0;
+}
+
+@media (max-width: 1000px) {
+    .imageGrid .tile {
+        width: 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .imageGrid .tile {
+        width: 100%;
+    }
+
+}
+
+
+
+#header a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+#header ul{
+    margin: 8px 0 0 0;
+    list-style: none;
+}
+
+#header a:hover{
+    background-color: #ddd;
+    color: #000;
+}

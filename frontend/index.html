@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ADC - Meal App</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="grid" id="showcase">
+        <div class="bg-image"></div>
+        <div class="content-wrap">
+            <h1>Are you hungry? Get your food at your doorsteps in a blink</h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ea reprehenderit nesciunt illum aspernatur! Molestiae error quam,
+                laboriosam quibusdam fugit ipsa facere veritatis? Doloremque molestiae
+                nobis debitis voluptates ipsam aspernatur ab!
+            </p>
+            <div class="header-btn">
+                <a href="#" class="btn" id="signIn">Sign in</a>
+                <a href="#" class="btn" id="signUpUser">Sign up</a>
+                <a href="#" class="btn" id="signUpCaterer">Caterer</a>
+                <a href="user/user.html" class="btn">Users</a>
+                <a href="admin/adminDashboard.html" class="btn">Admin</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Header -->
+    <main class="" id="main">
+        <!-- Section C -->
+        <section class="grid" id="section-c">
+            <div class="content-wrap">
+                <h2 class="content-title">Services</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Ea reprehenderit nesciunt illum aspernatur! Molestiae error quam,
+                    laboriosam quibusdam fugit ipsa facere veritatis? Doloremque molestiae
+                    nobis debitis voluptates ipsam aspernatur ab!
+                </p>
+            </div>
+        </section>
+
+        <!-- Section D -->
+        <section class="grid" id="section-d">
+            <div class="box">
+                <h2 class="content-title">Contact us</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Ea reprehenderit nesciunt illum aspernatur! Molestiae error quam,
+                    laboriosam quibusdam fugit ipsa facere veritatis? Doloremque molestiae
+                    nobis debitis voluptates ipsam aspernatur ab!
+                </p>
+                <p>Contact@yahoo.com</p>
+            </div>
+            <div class="box">
+                <h2 class="content-title">About BukaSpot</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Ea reprehenderit nesciunt illum aspernatur! Molestiae error quam,
+                    laboriosam quibusdam fugit ipsa facere veritatis? Doloremque molestiae
+                    nobis debitis voluptates ipsam aspernatur ab!
+                </p>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="grid" id="main-footer">
+        <p>Copyright &copy; 2019 BukaRight. All rights reserved</p>
+        <div>
+            <a href="#">terms of use</a> | <a href="#">Privacy policy</a>
+        </div>
+    </footer>
+
+    <!-- Sign in Modals -->
+    <div id="myModalSignIn" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Sign In</h2>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="username">Email</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="user_email2" name="user_email2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="password">Password</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="password" id="userpassword" name="password">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Submit">
+                            <input type="submit" value="Cancel" style="background-color:red;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign up Modals -->
+    <div id="myModalSignUp" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close close1">&times;</span>
+                <h2>Sign Up</h2>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="fname">First Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="fname" name="firstname">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="lname">Last Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="lname" name="lastname">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="email" id="user_email" name="user_email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="password1">Password</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="password" id="user_password1" name="user_password1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="password">Confirm password</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="password" id="user_password2" name="user_password2">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Submit" class="close1">
+                            <input type="submit" value="Cancel" style="background-color:red;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Caterer Modals -->
+    <div id="myModalCaterer" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close close2">&times;</span>
+                <h2>Caterers</h2>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="fname1">First Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="fname1" name="firstname1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="lname1">Last Name</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="lname1" name="lastname1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="email" id="user_email1" name="user_email1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="company">Restaurant</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="restaurant" name="restaurant">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="phone">Phone Number</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="phone_number" name="phone_number">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="city">City</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="text" id="city" name="city">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="password11">Password</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="password" id="user_password11" name="user_password11">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="password">Confirm password</label>
+                            </div>
+                            <div class="col-75">
+                                <input type="password" id="user_password21" name="user_password21">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input type="submit" value="Submit" class="close2">
+                            <input type="submit" value="Cancel" style="background-color:red;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <script src="../js/landing.js"></script>
+</body>
+
+</html>
