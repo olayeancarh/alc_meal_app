@@ -1,0 +1,24 @@
+{
+  "name": "meal_app_api",
+  "version": "1.0.0",
+  "description": "A simple meal booking app api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olayeancarh/alc_meal_app.git"
+  },
+  "keywords": [
+    "Meal",
+    "Food",
+    "Chow..."
+  ],
+  "author": "olayeancarh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olayeancarh/alc_meal_app/issues"
+  },
+  "homepage": "https://github.com/olayeancarh/alc_meal_app#readme"
+}
