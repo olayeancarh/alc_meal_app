@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/olayeancarh/alc_meal_app#readme",
   "dependencies": {
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
