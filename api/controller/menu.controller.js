@@ -1,15 +1,15 @@
-import MealService from '../services/meal.service';
+import MenuService from '../services/menu.service';
 
-const MealController = {
-    fetchAllMeals(req, res) {
-        const allMeals = MealService.fetchAllMeals();
+const MenuController = {
+    fetchAllMenus(req, res) {
+        const allMenus = MenuService.fetchAllMenus();
         return res.json({
             status: 'success',
-            data: allMeals
+            data: allMenus
         }).status(200);
     },
 
-    addAMeal(req, res) {
+    addAMenu(req, res) {
         /**
          * Expected Json Format
          * {
@@ -19,40 +19,40 @@ const MealController = {
          * }
          */
 
-         const newMeal = req.body;
+         const newMenu = req.body;
 
-         const createdMeal = MealService.addNewMeal(newMeal);
+         const createdMenu = MenuService.addNewMenu(newMenu);
 
          return res.json({
              status: "success",
-             data: createdMeal
+             data: createdMenu
          }).status(201);
     }, 
     
-    fetchAmeal(req, res) {
+    fetchAmenu(req, res) {
         const id = req.params.id;
-        const reqMeal = MealService.getAMeal(id);
+        const reqMenu = MenuService.getAMenu(id);
 
         return res.json({
             status: 'success',
-            data: reqMeal
+            data: reqMenu
         }).status(200);
     }, 
 
-    updateMeal(req, res) {
-        const oldMeal = req.body;
+    updateMenu(req, res) {
+        const oldMenu = req.body;
         const id = req.params.id;
-        const updatedMeal = MealService.updateAMeal(oldMeal, id);
+        const updatedMenu = MenuService.updateAMenu(oldMenu, id);
 
         return res.json({
             status: "success",
-            data: updatedMeal
+            data: updatedMenu
         }).status(201);
     },
 
-    deletedAMeal(req, res) {
+    deletedAMenu(req, res) {
         const id = req.params.id;
-        const deleteMeal = MealService.deleteAMeal(id);
+        const deleteMenu = MenuService.deleteAMenu(id);
 
         return res.json({
             status: "success"
@@ -61,4 +61,4 @@ const MealController = {
      
 };
 
-export default MealController;
+export default MenuController;

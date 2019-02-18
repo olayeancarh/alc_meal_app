@@ -24,6 +24,19 @@ const MealService = {
     return dummyData.meals.find(meals => meals.id == id) || {};
   },
 
+  updateAMeal(meal, id) {
+    const getMeal = dummyData.meals.find(meal => meal.id == id);
+    const getMealIndex = dummyData.meals.findIndex(meal => meal.id == id);
+    meal.id = id
+    dummyData.meals[getMealIndex] = meal;
+    return meal;
+  },
+
+  deleteAMeal(id) {
+    const getMealIndex = dummyData.meals.findIndex(meal => meal.id == id);
+    const mealdeleted = dummyData.meals.splice(getMealIndex,1);
+  }
+
 };
 
 export default MealService;

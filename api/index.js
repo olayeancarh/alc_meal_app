@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 
 // routes
 import mealRoutes from './routes/meal.route'
+import menuRoutes from './routes/menu.route'
 
 const app = express();
 
@@ -11,8 +12,11 @@ const PORT = 8001;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
-// handler
+// meals handler
 app.use('/api/v1/meals', mealRoutes)
+
+// menus handler
+app.use('/api/v1/menus', menuRoutes)
 
 app.get('/', (req, res) => res.send('The API is working, yeah'));
 
