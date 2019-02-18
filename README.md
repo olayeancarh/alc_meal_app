@@ -6,4 +6,10 @@ A simple meal booking appliation
 
 ## Installation Instruction
 
+# TRello
+https://trello.com/b/lU63E1n3/meal-booking-app-2
+
+# Frontend
+https://olayeancarh.github.io/
+
 
