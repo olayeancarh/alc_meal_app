@@ -3,9 +3,8 @@ import Menu from '../models/menu.models';
 
 const MenuService = {
   fetchAllMenus() {
-    const availableMenu = dummyData.menus.map((menu) => {
-      return new Menu(menu.id, menu.name, menu.date_created, menu.price);
-    });
+    const availableMenu = dummyData
+      .menus.map(menu => new Menu(menu.id, menu.name, menu.dateCreated, menu.price));
 
     return availableMenu;
   },
@@ -25,18 +24,17 @@ const MenuService = {
   },
 
   updateAMenu(menu, id) {
-    const getMenu = dummyData.menus.find(menu => menu.id == id);
-    const getMenuIndex = dummyData.menus.findIndex(menu => menu.id == id);
-    menu.id = id
-    dummyData.menus[getMenuIndex] = menu;
-    return menu;
+    const getMenu = menu;
+    const getMenuIndex = dummyData.menus.findIndex(menus => menus.id == id);
+    getMenu.id = id;
+    dummyData.menus[getMenuIndex] = getMenu;
+    return getMenu;
   },
 
   deleteAMenu(id) {
     const getMenuIndex = dummyData.menus.findIndex(menu => menu.id == id);
-    const menudeleted = dummyData.menus.splice(getMenuIndex,1);
-  }
-
+    dummyData.menus.splice(getMenuIndex, 1);
+  },
 };
 
 export default MenuService;
