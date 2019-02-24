@@ -1,7 +1,7 @@
-import { Router } from "express";
+import { Router } from 'express';
 
-// Controller 
-import MenuController from '../controller/menu.controller'
+// Controller
+import MenuController from '../controller/menu.controller';
 
 const router = Router();
 
@@ -11,4 +11,4 @@ router.post('/:id', MenuController.updateMenu);
 router.get('/delete/:id', MenuController.updateMenu);
 router.get('/:id', MenuController.fetchAmenu);
 
-export default router
+export default router;
