@@ -2,9 +2,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 
 // routes
-import mealRoutes from './routes/meal.route';
-import menuRoutes from './routes/menu.route';
-import orderRoutes from './routes/order.route';
+import mealRoutes from './api/routes/meal.route';
+import menuRoutes from './api/routes/menu.route';
+import orderRoutes from './api/routes/order.route';
 
 const app = express();
 
@@ -27,3 +27,5 @@ app.get('/', (req, res) => res.send('The API is working, yeah'));
 app.listen(PORT, () => {
   console.log('Server is running');
 });
+
+// module.exports = app.listen(PORT);
