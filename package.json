@@ -4,8 +4,9 @@
   "description": "A simple meal booking app api",
   "main": "index.js",
   "scripts": {
-    "start": "node --exec babel-node index.js",
-    "start:dev": "nodemon --exec babel-node index.js",
+    "start": "babel-node index.js",
+    "server": "nodemon --exec babel-node index.js",
+    "heroku-postbuild": "npm install",
     "test": "mocha --compilers js:@babel/register --exit",
     "cover": "istanbul cover _mocha",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
