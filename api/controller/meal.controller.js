@@ -30,7 +30,7 @@ const MealController = {
   },
 
   fetchAmeal(req, res) {
-    const id = req.params.id;
+    const { id } = req.params;
     const reqMeal = MealService.getAMeal(id);
 
     return res.json({
@@ -41,7 +41,7 @@ const MealController = {
 
   updateMeal(req, res) {
     const oldMeal = req.body;
-    const id = req.params.id;
+    const { id } = req.params;
     const updatedMeal = MealService.updateAMeal(oldMeal, id);
 
     return res.json({
@@ -51,11 +51,11 @@ const MealController = {
   },
 
   deletedAMeal(req, res) {
-    const id = req.params.id;
-    const deleteMeal = MealService.deleteAMeal(id);
+    const { id } = req.params;
+    MealService.deleteAMeal(id);
 
     return res.json({
-      status: 'success'
+      status: 'success',
     }).status(201);
   },
 
