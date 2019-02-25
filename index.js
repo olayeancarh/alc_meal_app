@@ -25,7 +25,7 @@ app.use('/api/v1/orders', orderRoutes);
 app.get('/', (req, res) => res.send('The API is working, yeah'));
 
 app.listen(PORT, () => {
-  console.log('Server is running');
-}); 
+  console.log(`Server is running at PORT ${PORT}`);
+});
 
 module.exports = app;
