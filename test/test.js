@@ -3,18 +3,18 @@ import chai from 'chai';
 import chaiHttp from 'chai-http';
 
 // chai.request('http://localhost:8001');
-// import app from '../index';
+import app from '../index';
 
 // Configure chai
 chai.use(chaiHttp);
 chai.should();
 
-const app = chai.request('http://localhost:8001');
+// const app = chai.request('http://localhost:8001');
 
 describe('Meals', () => {
   // Test to get all meals
   it('should get all meals', (done) => {
-    app
+    chai.request(app)
       .get('/api/v1/meals')
       .end((err, res) => {
         res.should.have.status(200);
@@ -26,7 +26,7 @@ describe('Meals', () => {
   // Test to get a single meal
   it('should get a meal by id', (done) => {
     const id = 1;
-    app
+    chai.request(app)
       .get(`/api/v1/meals/${id}`)
       .end((err, res) => {
         res.should.have.status(200);
@@ -42,7 +42,7 @@ describe('Meals', () => {
       size: 'Small',
       price: 350,
     };
-    app
+    chai.request(app)
       .post('/api/v1/meals')
       .send(meal)
       .end((err, res) => {
@@ -65,7 +65,7 @@ describe('Meals', () => {
       size: 'Small',
       price: 350,
     };
-    app
+    chai.request(app)
       .post(`/api/v1/meals/${id}`)
       .send(meal)
       .end((err, res) => {
@@ -83,7 +83,7 @@ describe('Meals', () => {
   // Test to delete meal
   it('should delete meal', (done) => {
     const id = 1;
-    app
+    chai.request(app)
       .get(`/api/v1/meals/${id}`)
       .end((err, res) => {
         res.should.have.status(200);
@@ -98,7 +98,7 @@ describe('Meals', () => {
 describe('Menus', () => {
   // Test to get all menus
   it('should get all menus', (done) => {
-    app
+    chai.request(app)
       .get('/api/v1/menus')
       .end((err, res) => {
         res.should.have.status(200);
@@ -110,7 +110,7 @@ describe('Menus', () => {
   // Test to get a single meenu
   it('should get a menu by id', (done) => {
     const id = 1;
-    app
+    chai.request(app)
       .get(`/api/v1/menus/${id}`)
       .end((err, res) => {
         res.should.have.status(200);
@@ -126,7 +126,7 @@ describe('Menus', () => {
       size: 'Medium',
       price: 700,
     };
-    app
+    chai.request(app)
       .post('/api/v1/menus')
       .send(menu)
       .end((err, res) => {
@@ -149,7 +149,7 @@ describe('Menus', () => {
       size: 'Small',
       price: 350,
     };
-    app
+    chai.request(app)
       .post(`/api/v1/menus/${id}`)
       .send(menu)
       .end((err, res) => {
@@ -167,7 +167,7 @@ describe('Menus', () => {
   // Test to delete menu
   it('should delete menu', (done) => {
     const id = 1;
-    app
+    chai.request(app)
       .get(`/api/v1/menus/${id}`)
       .end((err, res) => {
         res.should.have.status(200);
@@ -182,7 +182,7 @@ describe('Menus', () => {
 describe('Orders', () => {
   // Test to get all orders
   it('should get all orders', (done) => {
-    app
+    chai.request(app)
       .get('/api/v1/orders')
       .end((err, res) => {
         res.should.have.status(200);
@@ -194,7 +194,7 @@ describe('Orders', () => {
   // Test to get a single meenu
   it('should get a order by id', (done) => {
     const id = 1;
-    app
+    chai.request(app)
       .get(`/api/v1/orders/${id}`)
       .end((err, res) => {
         res.should.have.status(200);
@@ -210,7 +210,7 @@ describe('Orders', () => {
       dateOrdered: 'Mon Feb 18 2019 09:14:16 ',
       orderPrice: 300,
     };
-    app
+    chai.request(app)
       .post('/api/v1/orders')
       .send(order)
       .end((err, res) => {
@@ -233,7 +233,7 @@ describe('Orders', () => {
       dateOrdered: 'Mon Feb 18 2019 09:14:16 ',
       orderPrice: 300,
     };
-    app
+    chai.request(app)
       .post(`/api/v1/orders/${id}`)
       .send(order)
       .end((err, res) => {
@@ -251,7 +251,7 @@ describe('Orders', () => {
   // Test to delete order
   it('should delete order', (done) => {
     const id = 1;
-    app
+    chai.request(app)
       .get(`/api/v1/orders/${id}`)
       .end((err, res) => {
         res.should.have.status(200);
