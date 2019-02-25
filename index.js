@@ -24,7 +24,7 @@ app.use('/api/v1/orders', orderRoutes);
 
 app.get('/', (req, res) => res.send('The API is working, yeah'));
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running at PORT ${PORT}`);
 });
 
