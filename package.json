@@ -4,7 +4,8 @@
   "description": "A simple meal booking app api",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js",
+    "start": "node --exec babel-node index.js",
+    "start:dev": "nodemon --exec babel-node index.js",
     "test": "mocha --compilers js:@babel/register --exit",
     "cover": "istanbul cover _mocha",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
@@ -16,7 +17,8 @@
   "keywords": [
     "Meal",
     "Food",
-    "Chow..."
+    "Chow...",
+    "Everything food"
   ],
   "author": "olayeancarh",
   "license": "MIT",
@@ -37,6 +39,8 @@
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
     "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "coveralls": "^3.0.3",
     "eslint": "^5.14.0",
@@ -46,5 +50,9 @@
     "mocha": "^5.2.0",
     "mocha-lcov-reporter": "^1.3.0",
     "nodemon": "^1.18.10"
+  },
+  "engines": {
+    "node": "8.11.1",
+    "npm": "5.6.0"
   }
 }
