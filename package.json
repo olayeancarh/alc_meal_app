@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/olayeancarh/alc_meal_app#readme",
   "dependencies": {
+    "babel-loader": "^7.1.5",
     "body-parser": "^1.18.3",
     "chai-http": "^4.2.1",
     "express": "^4.16.4",
