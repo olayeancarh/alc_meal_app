@@ -7,7 +7,7 @@
     "start": "babel-node index.js",
     "start:dev": "nodemon --exec babel-node index.js",
     "heroku-postbuild": "npm install",
-    "test": "nyc --require @babel/register _mocha test/test.js --exit -w",
+    "test": "nyc --require @babel/register _mocha test/test.js --exit",
     "coverage": "nyc --reporter=text --require @babel/register mocha --exit"
   },
   "repository": {
