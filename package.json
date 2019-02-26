@@ -7,9 +7,9 @@
     "start": "babel-node index.js",
     "start:dev": "nodemon --exec babel-node index.js",
     "heroku-postbuild": "npm install",
-    "test": "mocha --compilers js:@babel/register --exit",
-    "cover": "istanbul cover _mocha",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+    "test": "cross-env NODE_ENV=test nyc mocha test/test.js",
+    "coverage": "istanbul cover test/test.js",
+    "coveralls": "npm run-script coverage && node bin/coveralls.js < coverage/lcov.info --compilers js:@babel/register"
   },
   "repository": {
     "type": "git",
@@ -53,5 +53,16 @@
   "engines": {
     "node": "8.11.1",
     "npm": "5.6.0"
+  },
+  "nyc": {
+    "require": [
+      "@babel/register"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "sourceMap": false,
+    "instrument": false
   }
 }

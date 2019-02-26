@@ -9,8 +9,6 @@ import app from '../index';
 chai.use(chaiHttp);
 chai.should();
 
-// const app = chai.request('http://localhost:8001');
-
 describe('Meals', () => {
   // Test to get all meals
   it('should get all meals', (done) => {
