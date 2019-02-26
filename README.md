@@ -2,7 +2,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/olayeancarh/alc-meal-app/badge.svg?branch=master)](https://coveralls.io/github/olayeancarh/alc-meal-app?branch=master)
 
 # Travis CI
-https://travis-ci.org/olayeancarh/alc_meal_app.svg?branch=master
+[![Build Status](https://travis-ci.org/olayeancarh/alc_meal_app.svg?branch=master)](https://travis-ci.org/olayeancarh/alc_meal_app)
 
 # alc_meal_app
 A simple meal booking appliation
