@@ -22,7 +22,7 @@ app.use('/api/v1/menus', menuRoutes);
 // orders handler
 app.use('/api/v1/orders', orderRoutes);
 
-app.get('/', (req, res) => res.send('The API is working, yeah'));
+app.get('/', (req, res) => res.send('The API is working, CHI!!!'));
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running at PORT ${PORT}`);
