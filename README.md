@@ -1,7 +1,5 @@
-# Coveralls
-[![Coverage Status](https://coveralls.io/repos/github/olayeancarh/alc-meal-app/badge.svg?branch=master)](https://coveralls.io/github/olayeancarh/alc-meal-app?branch=master)
+<a href='https://coveralls.io/github/olayeancarh/alc_meal_app?branch=master'><img src='https://coveralls.io/repos/github/olayeancarh/alc_meal_app/badge.svg?branch=master' alt='Coverage Status' /></a>
 
-# Travis CI
 [![Build Status](https://travis-ci.org/olayeancarh/alc_meal_app.svg?branch=master)](https://travis-ci.org/olayeancarh/alc_meal_app)
 
 # alc_meal_app
