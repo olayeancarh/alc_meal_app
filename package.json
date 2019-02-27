@@ -8,7 +8,7 @@
     "start:dev": "nodemon --exec babel-node index.js",
     "heroku-postbuild": "npm install",
     "test": "nyc --require @babel/register _mocha test/test.js --exit",
-    "coverage": "nyc --reporter=text --require @babel/register mocha --exit"
+    "coverage": "cross-env NODE_ENV=test nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
     "@babel/register": "^7.0.0",
+    "babel-plugin-istanbul": "^5.1.1",
     "chai": "^4.2.0",
     "coveralls": "^3.0.3",
     "eslint": "^5.14.0",
@@ -54,5 +55,12 @@
   "engines": {
     "node": "8.11.1",
     "npm": "5.6.0"
+  },
+  "nyc": {
+    "require": [
+      "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
   }
 }
